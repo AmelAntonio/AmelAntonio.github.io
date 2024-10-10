@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="g.css">
+    <script>
+        let clickCount = 0;
+        const colors = ['#4CAF50', '#FF5733', '#33C3FF', '#FFC300'];
+
+        function handleClick() {
+            clickCount++;
+            const button = document.querySelector('.main-button');
+            button.style.backgroundColor = colors[clickCount % colors.length];
+            if (clickCount > 4) {
+                window.location.href = 'hola.html';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <button class="main-button" onclick="handleClick()">Grecia</button>
+    </div>
+</body>
+</html>
